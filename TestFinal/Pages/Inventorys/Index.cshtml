@@ -1,0 +1,115 @@
+﻿@page
+@model TestFinal.Pages.Inventorys.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Inventory</h1>
+<!--This top part is used for searching by name or description and connects to the model and passes the search value-->
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<form>
+    <div class="form-actions no-color">
+        <p>
+            Find by Name or Description:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-primary" /> |
+            <a asp-page="./Index">Back to full List</a>
+        </p>
+    </div>
+</form>
+<!--This section is incharge of displaying the data and doing desc and asc sorts-->
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                 <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort" asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.InventorysList[0].Name)
+                </a>
+                
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InventorysList[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InventorysList[0].ItemCount)
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.WeightSort" asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.InventorysList[0].Weight)
+                </a>
+                
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InventorysList[0].MinAlertThresh)
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort" asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.InventorysList[0].TimeArrived)
+                </a>
+                
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InventorysList[0].Id)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.InventorysList) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MinAlertThresh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeArrived)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-primary" >Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-primary" style="background-color:#47DE00;">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-primary" style="background-color:#FF3333;">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<!-- Pagging controls -->
+@{
+    var prevDisabled = !Model.InventorysList.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.InventorysList.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.InventorysList.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.InventorysList.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Next
+</a>
+
+

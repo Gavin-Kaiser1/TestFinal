@@ -1,0 +1,18 @@
+﻿@page "{handler?}"
+@model TestFinal.Pages.Inventorys.Index1Model
+@addTagHelper *, Microsoft.AspNetCore.MVC.TagHelpers
+@using TestFinal.Models
+
+<!--These buttons link to the onclick events in the Index1 c# file-->
+<form>
+    <div class="form-actions no-color">
+        <h2>Regular Inventory Report</h2>
+        <p>
+            <input type="submit" value="Generate a New Report" class="btn btn-primary" method="post" asp-page-handler="OnClick"/>
+        </p>
+        <h2>Low Inventory Report</h2>
+        <p>  
+            <input type="submit" value="Generate a New Report" class="btn btn-primary" method="post" asp-page-handler="OnClick2"/>
+        </p>
+    </div>
+</form>

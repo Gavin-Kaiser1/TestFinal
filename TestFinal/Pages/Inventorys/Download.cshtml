@@ -1,0 +1,40 @@
+﻿@page "{handler?}"
+@model TestFinal.Pages.Inventorys.DownloadModel
+@addTagHelper *, Microsoft.AspNetCore.MVC.TagHelpers
+@using TestFinal.Models
+@{
+}
+
+
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Index</title>
+</head>
+<!--This is the search functionality -->
+<form>
+    <div class="form-actions no-color">
+        <p>
+            Find by Name or Description:
+            <input type="text" name="testSe" value="@Model.testSe" />
+            <input type="submit" value="Search" class="btn btn-primary" />
+            
+        </p>
+    </div>
+</form>
+<!--This is the listing for the downloadable files-->
+<body style="align-content: center;" class="align-center">
+    <table style="align-content: center;">
+        <tr>
+            <th>File Name</th>
+            <th></th>
+        </tr>
+        @foreach (FileModel file in Model.Files)
+        {
+            <tr>
+                <!--This links to the model to get the file names and the download links-->
+                <td>@file.FileName</td>
+                <td><a href="@Url.Page("Download", "DownloadFile", new { fileName = file.FileName })">Download</a></td>
+            </tr>
+        }
+    </table>
+</body>

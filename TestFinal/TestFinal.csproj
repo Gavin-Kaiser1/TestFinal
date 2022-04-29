@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject></StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Reports\04-09-2022-22-18-59.txt" />
+    <Content Remove="wwwroot\Reports\04-09-2022-22-44-43.txt" />
+    <Content Remove="wwwroot\Reports\04-09-2022-22-46-15.txt" />
+    <Content Remove="wwwroot\Reports\04-10-2022-00-21-40.txt" />
+    <Content Remove="wwwroot\Reports\04-10-2022-00-24-49.txt" />
+    <Content Remove="wwwroot\Reports\04-10-2022-00-24-54.txt" />
+    <Content Remove="wwwroot\Reports\9e-DE.txt" />
+    <Content Remove="wwwroot\Reports\Report4-9-2022.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Reports\04-09-2022-22-18-59.txt" />
+    <None Include="wwwroot\Reports\04-09-2022-22-44-43.txt" />
+    <None Include="wwwroot\Reports\04-09-2022-22-46-15.txt" />
+    <None Include="wwwroot\Reports\04-10-2022-00-21-40.txt" />
+    <None Include="wwwroot\Reports\04-10-2022-00-24-49.txt" />
+    <None Include="wwwroot\Reports\04-10-2022-00-24-54.txt" />
+    <None Include="wwwroot\Reports\9e-DE.txt" />
+    <None Include="wwwroot\Reports\Report4-9-2022.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="3.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0-preview.1.22076.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0-preview.1.22076.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0-preview.1.22076.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.0-preview.1.22116.2" />
+    <PackageReference Include="NETStandard.Library" Version="2.0.3" />
+    <PackageReference Include="PagedList.Mvc" Version="4.5.0" />
+    <PackageReference Include="System.IO" Version="4.3.0" />
+    <PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>

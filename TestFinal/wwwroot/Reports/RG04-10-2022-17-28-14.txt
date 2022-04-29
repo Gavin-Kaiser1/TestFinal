@@ -1,0 +1,114 @@
+Inventory Report: 
+
+Name: Fish
+Id number: 3
+Current inventory count: 30
+Minimum Alert: 5
+Date removed: 2/21/2022 12:00:00 AM
+
+
+
+Name: Treadmills
+Id number: 4
+Current inventory count: 2
+Minimum Alert: 1
+Date removed: 2/7/2022 12:00:00 AM
+
+
+
+Name: Seats
+Id number: 5
+Current inventory count: 60
+Minimum Alert: 10
+Date removed: 2/8/2022 12:00:00 AM
+
+
+
+Name: Copper pipping 
+Id number: 6
+Current inventory count: 30
+Minimum Alert: 6
+Date removed: 1/30/2022 12:00:00 AM
+
+
+
+Name: Seeds
+Id number: 7
+Current inventory count: 4
+Minimum Alert: 0
+Date removed: 2/5/2022 12:00:00 AM
+
+
+
+Name: Yogurt 
+Id number: 8
+Current inventory count: 1
+Minimum Alert: 0
+Date removed: 2/15/2022 12:00:00 AM
+
+
+
+Name: test entry
+Id number: 9
+Current inventory count: 10
+Minimum Alert: 10
+Date removed: 2/1/2022 12:00:00 AM
+
+
+
+Name: tacos
+Id number: 10
+Current inventory count: 250
+Minimum Alert: 50
+Date removed: 2/20/2022 12:00:00 AM
+
+
+
+Name: Pure gold bars
+Id number: 11
+Current inventory count: 25
+Minimum Alert: 0
+Date removed: 2/20/2022 12:00:00 AM
+
+
+
+Name: Froklifts
+Id number: 12
+Current inventory count: 2
+Minimum Alert: 0
+Date removed: 2/1/2022 12:00:00 AM
+
+
+
+Name: Produce
+Id number: 13
+Current inventory count: 5
+Minimum Alert: 4
+Date removed: 3/7/2022 12:00:00 AM
+
+
+
+Name: Drains
+Id number: 14
+Current inventory count: 400
+Minimum Alert: 200
+Date removed: 3/7/2022 12:00:00 AM
+
+
+
+Name: test2
+Id number: 15
+Current inventory count: 4
+Minimum Alert: 40
+Date removed: 3/27/2022 12:00:00 AM
+
+
+
+Name: Testing it all
+Id number: 16
+Current inventory count: 5
+Minimum Alert: 10
+Date removed: 4/10/2022 12:00:00 AM
+
+
+

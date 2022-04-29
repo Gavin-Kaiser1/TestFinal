@@ -1,0 +1,70 @@
+﻿
+@page
+@model TestFinal.Pages.Inventorys.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<style>
+    div{
+
+        align-content:center;
+    }
+    .center{
+        text-align: center;
+    }
+</style>
+
+<h1>Edit</h1>
+
+<h4>Inventory</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" style = "align-content:center;">
+            <div asp-validation-summary="ModelOnly" class="text-danger" style = "align-content:center;"></div>
+            <input type="hidden" asp-for="Inventory.Id" style = "align-content:center;"/>
+            <div class="form-group" style = "align-content:center;">
+                <label asp-for="Inventory.Name" class="control-label" style = "align-content:center;"></label>
+                <input asp-for="Inventory.Name" class="form-control" />
+                <span asp-validation-for="Inventory.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inventory.Weight" class="control-label"></label>
+                <input asp-for="Inventory.Weight" class="form-control" />
+                <span asp-validation-for="Inventory.Weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inventory.Description" class="control-label"></label>
+                <input asp-for="Inventory.Description" class="form-control" />
+                <span asp-validation-for="Inventory.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inventory.ItemCount" class="control-label"></label>
+                <input asp-for="Inventory.ItemCount" class="form-control" />
+                <span asp-validation-for="Inventory.ItemCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inventory.MinAlertThresh" class="control-label"></label>
+                <input asp-for="Inventory.MinAlertThresh" class="form-control" />
+                <span asp-validation-for="Inventory.MinAlertThresh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Inventory.TimeArrived" class="control-label"></label>
+                <input asp-for="Inventory.TimeArrived" class="form-control" />
+                <span asp-validation-for="Inventory.TimeArrived" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

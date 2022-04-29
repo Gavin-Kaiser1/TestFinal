@@ -1,0 +1,30 @@
+﻿@page "{handler?}"
+@model TestFinal.Pages.Inventorys.ReportsModel
+@addTagHelper *, Microsoft.AspNetCore.MVC.TagHelpers
+@using TestFinal.Models
+
+@{
+}
+
+<h1>Reports</h1>
+<!--The buttons connect to onclick events that create reports and email them-->
+<form>
+    <div class="form-actions no-color">
+        <h2>Regular Inventory Report</h2>
+        <p>
+             Email Address:
+            <input type="email" name="emailInput" value="@Model.emailInput" />
+            <input type="submit" value="Generate a Report and Send it" class="btn btn-primary" method="post" asp-page-handler="OnClick"/>
+        </p>
+        <h2>Low Inventory Report</h2>
+        <p>
+             Email Address:
+            <input type="email" name="emailInput2" value="@Model.emailInput2" />
+            <input type="submit" value="Generate a Report and Send it" class="btn btn-primary" method="post" asp-page-handler="OnClick2"/>
+        </p>
+    </div>
+</form>
+
+
+
+

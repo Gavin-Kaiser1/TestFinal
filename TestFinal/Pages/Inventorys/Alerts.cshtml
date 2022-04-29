@@ -1,0 +1,94 @@
+﻿@page 
+@model TestFinal.Pages.Inventorys.AlertsModel
+
+@{
+
+}
+
+<h1>Low Inventory</h1>
+<!--This is the search functionality  it goes to the current filter in the model.-->
+<form>
+    <div class="form-actions no-color">
+        <p>
+            Find by Name:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-primary" /> |
+            <a asp-page="./Alerts">Back to full List</a>
+        </p>
+        
+    </div>
+</form>
+<!-- This is database display commands-->
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.InventorysList[0].Name)               
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.InventorysList[0].ItemCount)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.InventorysList[0].MinAlertThresh)
+            </th>
+            <th>               
+                @Html.DisplayNameFor(model => model.InventorysList[0].TimeArrived)               
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InventorysList[0].Id)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        @foreach (var item in Model.InventorysList) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemCount)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.MinAlertThresh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeArrived)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-primary" >Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-primary" style="background-color:#47DE00;">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-primary" style="background-color:#FF3333;">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<!-- This is the pagging logic-->
+@{
+    var prevDisabled = !Model.InventorysList.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.InventorysList.HasNextPage ? "disabled" : "";
+}
+<!-- This is the pagging logic continued-->
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.InventorysList.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.InventorysList.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Next
+</a>

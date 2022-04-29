@@ -1,0 +1,26 @@
+Inventory Report: 
+
+Name: test entry
+Id number: 9
+Current inventory count: 10
+Minimum Alert: 10
+Date Modified: 2/1/2022 12:00:00 AM
+
+
+
+Name: test2
+Id number: 15
+Current inventory count: 4
+Minimum Alert: 40
+Date Modified: 3/27/2022 12:00:00 AM
+
+
+
+Name: Testing it all
+Id number: 16
+Current inventory count: 5
+Minimum Alert: 10
+Date Modified: 4/10/2022 12:00:00 AM
+
+
+

@@ -1,0 +1,100 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a {
+  color: #0077cc;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+.btn-Det {
+    color: #FF3333;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+
+:after, *:before {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+     background: linear-gradient(to bottom, #ffffff 0%, #dddee1 100%);
+    color: #333;
+    font-family: 'Ubuntu', sans-serif;
+    align-content: center;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+
+
+header {
+    color: #fff;
+    text-align: center;
+}
+
+main {
+    background: linear-gradient(to bottom, #ffffff 0%, #dddee1 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    
+}
+form{
+        align-content: center;
+        text-align: center;
+}
+div {
+    align-content: center;
+}
+footer {
+    background: #dddee1;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+small {
+    opacity: .5;
+    font-weight: 300;
+    a{
+    color: inherit;
+    }
+}
